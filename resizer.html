@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resizable Split Screen</title>
+  <style>
+    body {
+      margin: 0;
+      pointer-events: none;
+    }
+    #divider {
+      position: fixed;
+      left: 50%;
+      top: 0;
+      width: 10px;
+      height: 100vh;
+      background: #aaa;
+      cursor: ew-resize;
+      pointer-events: all;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+<div id="divider"></div>
+
+<script>
+  const divider = document.getElementById('divider');
+  let isDragging = false;
+
+  divider.addEventListener('mousedown', () => {
+    isDragging = true;
+    document.addEventListener('mousemove', onDrag);
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.removeEventListener('mousemove', onDrag);
+    });
+  });
+
+  function onDrag(e) {
+    if (isDragging) {
+      window.electron.resize(e.clientX);
+      divider.style.left = `${e.clientX}px`;
+    }
+  }
+</script>
+</body>
+</html>
