@@ -1,0 +1,9 @@
+🔹 Core Technologies
+✅ Monaco Editor – Provides a VS Code-like code editing experience with syntax highlighting and 	autocompletion.✅ Electron.js – Enables building a cross-platform desktop application from web technologies.✅ Node.js – Handles backend functionalities and integrates with Electron.
+🔹 Development & Build Tools
+✅ Webpack – Bundles and optimizes project files for efficient loading.✅ JavaScript (ES6+) – Core programming language for the editor logic and Electron integration.✅ HTML & CSS – Used for structuring and styling the editor interface.
+🔹 Security & Performance Enhancements
+✅ Context Isolation in Electron – Prevents security vulnerabilities by isolating renderer and main 	processes.✅ Preload Scripts – Securely exposes specific Electron APIs to the renderer process.
+🔹 Future Technologies for Enhancements
+✅ Web-Sockets – To enable real-time collaboration between multiple users.✅ Cloud Storage APIs – For document saving and retrieval.✅ YouTube & Spotify APIs – To allow seamless media access within the editor.
+
